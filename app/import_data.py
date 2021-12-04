@@ -6,13 +6,16 @@ from pymongo import MongoClient
 from pathlib import Path
 
 # Vars
-dbName="sleeperPy"
-collectionName="players"
+host = "mongodb"
+port = 27017
+dbName = "sleeperPy"
+collectionName = "players"
 playersFile = "players.json"
 
+
 def mongoConnect():
-    # connect to mongodb locally
-    client = MongoClient()
+    
+    client = MongoClient(host,port)
     # default host/port
     db = client[dbName]
     collection = db[collectionName]
@@ -32,9 +35,7 @@ def mongoImport():
         # clean up existing data if exists
         collection.delete_many({})
         # import new data
-        os.system("mongoimport --db " + dbName + " --collection " + collectionName +" --file " + playersFile)
-
+        os.system("mongoimport --host " + host + " --port " + str(port) + " --db " + dbName + " --collection " + collectionName +" --file " + playersFile)
 
 db, collection = mongoConnect()
 mongoImport()
-
