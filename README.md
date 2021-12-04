@@ -16,6 +16,14 @@ cd deployments
 kubectl apply -f .
 ``` 
 
+I also used [kompose](https://kompose.io/) to assist with creating the initial deployment file.
+
+To continue development, after changes are made:
+```
+docker-compose build
+docker-compose push
+k apply -f deployments/
+```
 
 ## Challenge walkthrough and writeup
 
