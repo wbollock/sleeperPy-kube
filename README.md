@@ -8,4 +8,4 @@ A simple Python docker container grabs player data from Sleeper Fantasy Football
 
 ## Usage
 
-Using a `kubectl` file from your cloud provider, run the deployment.
+Using a `kubeconfig` file from your cloud provider, run the deployment.
