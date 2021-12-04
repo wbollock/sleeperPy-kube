@@ -1,4 +1,4 @@
-# DigitalOceanKubernetesChallenge
+# Digital Ocean Kubernetes Challenge
 
 ## Purpose
 
