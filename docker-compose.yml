@@ -1,10 +1,10 @@
 version: "3.3"
 services:
   mongodb:
-    container_name: sleeperPy_mongo
+    container_name: sleeperpy_mongo
     image: mongo:latest
     restart: always
   sleeperpy:
-    container_name: sleeperPy
+    container_name: sleeperpy
     build: .
-  
+    image: wbollock/sleeperpy  
