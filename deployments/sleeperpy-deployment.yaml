@@ -9,7 +9,7 @@ metadata:
     io.kompose.service: sleeperpy
   name: sleeperpy
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       io.kompose.service: sleeperpy
@@ -25,7 +25,9 @@ spec:
       containers:
         - image: wbollock/sleeperpy:latest
           name: sleeperpy
-          resources: {}
+          #command: [ "/bin/bash", "-c", "--" ]
+          #args: [ "while true; do sleep 30; done;" ]
         - image: mongo:latest
           name: mongodb
+        
 status: {}

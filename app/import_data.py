@@ -6,7 +6,7 @@ from pymongo import MongoClient
 from pathlib import Path
 
 # Vars
-host = "mongodb"
+host = "localhost"
 port = 27017
 dbName = "sleeperPy"
 collectionName = "players"
